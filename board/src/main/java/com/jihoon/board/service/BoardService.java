@@ -243,6 +243,7 @@ public class BoardService {
         return ResponseDto.setSuccess(ResponseMessage.SUCCESS, data);
     }
 
+    // ** 연관검색
     public ResponseDto<GetTop15RelatedSearchWordResponseDto> getTop15RelatedSearchWord(String searchWord) {
         GetTop15RelatedSearchWordResponseDto data = null;
 
