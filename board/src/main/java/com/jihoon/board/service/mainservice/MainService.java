@@ -26,17 +26,17 @@ public class MainService {
        // System.out.println("시작 고정 딜레이 작업 : " + System.currentTimeMillis() / 1000);
    // }
     
-    @Scheduled(cron="2 * * * * ?") // cron : 특정한 시간을 지정해서 하는 행위  (// 2초 뒤에 실행 됨)
-    public void scheduleCronJob(){
+    //@Scheduled(cron="2 * * * * ?") // cron : 특정한 시간을 지정해서 하는 행위  (// 2초 뒤에 실행 됨)
+   // public void scheduleCronJob(){
         //System.out.println("Cron Job으로 시간 지정 작업 : " + System.currentTimeMillis() / 1000);
-        try {
-            crawlling();
+        //try {
+            //crawlling();
         
-        } catch(Exception exception) {
-            exception.printStackTrace();
-        }
+        //} catch(Exception exception) {
+           // exception.printStackTrace();
+       //}
     
-    }
+    //}
 
     // 어떤 특정 스케쥴이 존재하고 실행중에 있다면 다른 스케쥴은 사용할 수 없음
     // 만약에 밑에처럼 2번 스케쥴이 있다면 이 두개가 동작을 안 한다고 했나 아니면 하나만 동작을 한다고 했나 그렇다고 함 
