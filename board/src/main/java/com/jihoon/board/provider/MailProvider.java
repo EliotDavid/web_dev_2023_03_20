@@ -17,12 +17,12 @@ public class MailProvider {
 
         try { 
             SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-            simpleMailMessage.setFrom("1223020@donga.ac.kr"); 
+            simpleMailMessage.setFrom("ddrtt777@gmail.com"); 
             simpleMailMessage.setTo("optimistprimer@naver.com");
             //simpleMailMessage.setFrom("보내는 사람의 메일"); // setFrom() : 누구로부터 보내겠다 // 보내는 사람의 메일을 적어준다
             //simpleMailMessage.setTo("받는 사람의 메일주소"); // setTo() :받는 사람의 메일주소   
             //simpleMailMessage.setSubject("메일 제목"); // setSubject() : 메일 제목
-            simpleMailMessage.setSubject("메일 제목");
+            simpleMailMessage.setSubject("메일 테스트");
             simpleMailMessage.setText("<p style='color: red;'>html 형식</p>");
             //simpleMailMessage.setText("html형식의 내용"); // setText() : 메일 내용이 html형식으로 나타남
             javaMailSender.send(simpleMailMessage);

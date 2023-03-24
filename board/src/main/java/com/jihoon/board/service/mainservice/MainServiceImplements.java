@@ -8,8 +8,10 @@ import org.jsoup.select.Elements;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import com.jihoon.board.service.MainService;
+
 @Service
-public class MainService {
+public class MainServiceImplements implements MainService{
     
     // 스케쥴 작업이 끝나는 시간 기준으로 실행
     //@Scheduled(fixedDelay = 1000) // 1000 밀리세컨드임

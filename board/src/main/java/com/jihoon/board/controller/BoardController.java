@@ -28,6 +28,7 @@ import com.jihoon.board.dto.response.board.GetMyListResponseDto;
 import com.jihoon.board.dto.response.board.GetSearchListResponseDto;
 import com.jihoon.board.dto.response.board.GetTop15RelatedSearchWordResponseDto;
 import com.jihoon.board.dto.response.board.GetTop15SearchWordResponseDto;
+import com.jihoon.board.dto.response.board.GetTop3ListResponseDto;
 import com.jihoon.board.dto.response.board.LikeResponseDto;
 import com.jihoon.board.dto.response.board.PatchBoardResponseDto;
 import com.jihoon.board.dto.response.board.PostBoardResponseDto;
@@ -126,6 +127,17 @@ public class BoardController {
         ResponseDto<List<GetSearchListResponseDto>> response = boardService.getSearchList(searchWord, previousSearchWord);
         return response;
     }
+
+
+    @ApiOperation(value = "")
+    @GetMapping()
+    public ResponseDto<List<GetTop3ListResponseDto>> getTop3List(){
+        ResponseDto<List<GetTop3ListResponseDto>> response = boardService.getTop3List();
+        return response;
+
+    }
+
+
 
     @ApiOperation(value = "인기 검색어 리스트 가져오기", notes = "요청을 하면 성공시에는 가장 많이 검색한 15개의 검색어 리스트를 반환, 실패시 실패메세지를 반환함")
     @GetMapping(GET_TOP15_SEARCH_WORD)
