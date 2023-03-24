@@ -5,11 +5,13 @@ import java.util.List;
 
 import com.jihoon.board.entity.BoardEntity;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@ApiModel(value = "좋아요 기준 상위 3개 게시물 리스트 가져오기 Response Body - data")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

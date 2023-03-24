@@ -62,6 +62,8 @@ public class BoardController {
     
     private final String DELETE_BOARD = "/{boardNumber}";
 
+    private final String GET_TOP3_LIST = "/top3-list";
+
     @ApiOperation(value = "게시물 작성", notes = "제목, 내용, 이미지를 전송하면 게시물 작성 결과로 작성된 게시물 정보를 반환, 실패시에는 실패메세를 반환함")
     @PostMapping(POST_BOARD)
     public ResponseDto<PostBoardResponseDto> postBoard(
@@ -129,8 +131,8 @@ public class BoardController {
     }
 
 
-    @ApiOperation(value = "")
-    @GetMapping()
+    @ApiOperation(value = "좋아요 기준 상위 3개 게시물 리스트 가져오기", notes = "요청을 하면 좋아요 수 기준으로 상위 3개 게시물 리스트를 반환하고 실패시에는 실패 메세지를 반환")
+    @GetMapping(GET_TOP3_LIST)
     public ResponseDto<List<GetTop3ListResponseDto>> getTop3List(){
         ResponseDto<List<GetTop3ListResponseDto>> response = boardService.getTop3List();
         return response;
