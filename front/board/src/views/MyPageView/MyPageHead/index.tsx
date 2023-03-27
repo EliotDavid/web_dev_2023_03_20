@@ -19,7 +19,7 @@ export default function MyPageHead() {
     <Box sx={{ p: '40px 120px', display: 'flex' }}>
         <Box>
             <IconButton onClick={onLogoutHandler}>
-                <Avatar sx={{ height: '120px', width: '120px' }} alt={user?.nickname} src={user?.profile} />
+                <Avatar sx={{ height: '120px', width: '120px' }} alt={user?.nickname} src={user?.profile ? user.profile : '' } />
             </IconButton>
         </Box>
         <Box sx={{ ml: '25px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>

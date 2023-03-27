@@ -4,7 +4,7 @@ interface RequestDto {
 
     email : string;
     password : string;
-    nickName : string;
+    nickname : string;
     telNumber : string;
     address : string;
 }

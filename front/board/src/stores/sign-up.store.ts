@@ -13,14 +13,14 @@ interface ISignUpStore {
     email: string;
     password: string;
     passwordCheck: string;
-    nickName: string;
+    nickname: string;
     telNumber: string;
     address: string;
     addressDetail: string;
     setEmail: (str: string) => void;
     setPassword: (str: string) => void;
     setPasswordCheck: (str: string) => void;
-    setNickName: (str: string) => void;
+    setNickname: (str: string) => void;
     setTelNumber: (str: string) => void
     setAddress: (str: string) => void;
     setAddressDetail: (str: string) => void;
@@ -31,14 +31,14 @@ const useStore = create<ISignUpStore>((set) => ({
     email: '',
     password: '',
     passwordCheck: '',
-    nickName: '',
+    nickname: '',
     telNumber: '',
     address: '',
     addressDetail: '',
     setEmail: (email) => set((state) => ({...state, email})),
     setPassword: (password) => set((state) => ({...state, password})),
     setPasswordCheck: (passwordCheck) => set((state) => ({...state, passwordCheck})),
-    setNickName: (nickName) => set((state) => ({...state, nickName})),
+    setNickname: (nickname) => set((state) => ({...state, nickname})),
     setTelNumber: (telNumber) => set((state) => ({...state, telNumber})),
     setAddress: (address) => set((state) => ({...state, address})),
     setAddressDetail: (addressDetail) => set((state) => ({...state, addressDetail})),
